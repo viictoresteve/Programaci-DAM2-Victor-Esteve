@@ -22,6 +22,7 @@ public class Game extends JPanel {
 	public static final double BLOCK_HEIGHT = 20.0;
 	
 	public int lives = 3;
+	public int speed = 0;
 
 	
 	public static final int COUNT_BLOCKS_X = 11;
@@ -36,7 +37,7 @@ public class Game extends JPanel {
 
 	public Game() {
 		int width=70, height=40;
-		int i=0, j=0,x = 150,y = 30;
+		int i=0, j=0,x = 150,y = 80;
 		while (i<3) {
 			while(j<7) {
 				int random = 1 + (int)(Math.random()*((3-1)+1));
@@ -69,7 +70,7 @@ public class Game extends JPanel {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				racquet.keyPressed(e);
+				racquet.keyPressed(e, speed);
 			}
 		});
 		setFocusable(true);
@@ -137,7 +138,7 @@ public class Game extends JPanel {
 		JFrame frame = new JFrame("PAU ROIG");
 		Game game = new Game();
 		frame.add(game);
-		frame.setSize(800, 600);
+		frame.setSize(900, 600);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
