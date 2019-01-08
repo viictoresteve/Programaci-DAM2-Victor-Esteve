@@ -3,7 +3,7 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 public class Racquet {
-	private static final int Y = 550;
+	private static final int Y = 650;
 	private static final int WITH = 100;
 	private static final int HEIGHT = 20;
 	int x = 0;
@@ -29,9 +29,9 @@ public class Racquet {
 
 	public void keyPressed(KeyEvent e, int speed) {
 		if (e.getKeyCode() == KeyEvent.VK_LEFT)
-			xa = -3 - speed;
+			xa = -6 - speed;
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT)
-			xa = 3 + speed;
+			xa = 6 + speed;
 	}
 
 	public Rectangle getBounds() {

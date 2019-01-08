@@ -13,8 +13,6 @@ public class greenBrick extends Brick {
 		super.paint(g2d, Color.green);
 	}
 	public void doYou() {
-		vidas--;
-		System.out.println(vidas);
 	}
 
 }
